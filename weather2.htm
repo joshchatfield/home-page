@@ -1,0 +1,173 @@
+
+<body>
+    <div class = "wrapper">
+    <!-- Veneta -->
+        <div class = "container" id = "venetaContainer">
+            <div class = "image" id = "venetaImage">
+            </div>
+            <div class = "title" id = "venetaTitle">
+                    <p> loading, please wait...</p>
+            </div>
+            <div class = "temperature" id = "venetaTemperature">
+            </div>
+            <button class = "button" id = "venetaButton"></button>
+            <div class = "windSpeed" id = "venetaWindSpeed">
+            </div>
+        </div>
+
+        <!-- Eugene -->
+        <div class = "container" id = "eugeneContainer">
+            <div class = "image" id = "eugeneImage">
+            </div>
+            <div class = "title" id = "eugeneTitle">
+                    <p> loading, please wait...</p>
+            </div>
+            <div class = "temperature" id = "eugeneTemperature">
+            </div>
+            <button class = "button" id = "eugeneButton"></button>
+            <div class = "windSpeed" id = "eugeneWindSpeed">
+            </div>
+        </div>
+
+        <!-- Florence -->
+        <div class = "container" id = "florenceContainer">        
+            <div class = "image" id = "florenceImage">
+            </div>
+            <div class = "title" id = "florenceTitle">
+                    <p> loading, please wait...</p>
+            </div>
+            <div class = "temperature" id = "florenceTemperature">
+            </div>
+            <button class = "button" id = "florenceButton"></button>
+            <div class = "windSpeed" id = "florenceWindSpeed">
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    
+    .wrapper{
+        margin:auto;
+        height:200px;
+        width:650px;
+
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+
+    .container{
+        position:relative;
+        text-align:center;
+        width:150px;
+        box-shadow:0 0 20px black;
+        padding:20px;
+        background:white;
+        margin:10px;
+        float:left;
+    }
+
+    .image{
+    }
+
+    .title{
+        font-size:22px;
+    }
+
+    .temperature{
+        float: left;
+        margin-left:25px;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+
+    .button{
+        float: left;
+        margin-left:10px;
+        margin-top:5px;
+    }
+
+    .windSpeed{
+        clear:left;
+    }
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    var isFerenheit = true;    
+    $("document").ready(function(){
+        var navAddress = "https://api.apixu.com/v1/current.json?key=f26a8406e424451fb96161244170102&q=veneta,or"; 
+        var navAddress2 = "https://api.apixu.com/v1/current.json?key=f26a8406e424451fb96161244170102&q=eugene,or";
+        var navAddress3 = "https://api.apixu.com/v1/current.json?key=f26a8406e424451fb96161244170102&q=florence,or";
+
+        // Veneta
+        $.getJSON(navAddress,function(json){
+            $("#venetaTitle").html(json.location.name);
+            $("#venetaTemperature").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+            $("#venetaWindSpeed").html("wind: "+json.current.wind_mph+" mph");
+            $("#venetaImage").append('<img src = "http:'+json.current.condition.icon+'">');
+
+            var buttonString = String.fromCharCode(176)+"C / "+String.fromCharCode(176)+"F";
+            $("#venetaButton").html(buttonString);
+
+            //button: toggle F and C
+            $("#venetaButton").click(function(){
+                if(isFerenheit === false){
+                    $("#venetaTemperature").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+                    isFerenheit = true;
+                }else if(isFerenheit === true){
+                    $("#venetaTemperature").html(json.current.temp_c+" "+String.fromCharCode(176)+"C");
+                    isFerenheit = false;
+                }
+            });
+        });
+
+        // Eugene
+        $.getJSON(navAddress2,function(json){
+            $("#eugeneTitle").html(json.location.name);
+            $("#eugeneTemperature").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+            $("#eugeneWindSpeed").html("wind: "+json.current.wind_mph+" mph");
+            $("#eugeneImage").append('<img src = "http:'+json.current.condition.icon+'">');
+
+            var buttonString = String.fromCharCode(176)+"C / "+String.fromCharCode(176)+"F";
+            $("#eugeneButton").html(buttonString);
+
+            //button: toggle F and C
+            $("#eugeneButton").click(function(){
+                if(isFerenheit === false){
+                    $("#eugeneTemperature").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+                    isFerenheit = true;
+                }else if(isFerenheit === true){
+                    $("#eugeneTemperature").html(json.current.temp_c+" "+String.fromCharCode(176)+"C");
+                    isFerenheit = false;
+                }
+            });
+        });
+
+        // Florence
+        $.getJSON(navAddress3, function(json){
+            $("#florenceTitle").html(json.location.name);
+            $("#florenceTemperature").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+            $("#florenceWindSpeed").html("wind: "+json.current.wind_mph+" mph");
+            $("#florenceImage").append('<img src = "http:'+json.current.condition.icon+'">');
+
+            var buttonString = String.fromCharCode(176)+"C / "+String.fromCharCode(176)+"F";
+            $("#florenceButton").html(buttonString);
+
+            //button: toggle F and C
+            $("#florenceButton").click(function(){
+                if(isFerenheit === false){
+                    $("#florenceTemperature").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+                    isFerenheit = true;
+                }else if(isFerenheit === true){
+                    $("#florenceTemperature").html(json.current.temp_c+" "+String.fromCharCode(176)+"C");
+                    isFerenheit = false;
+                }
+            });                
+        });
+
+    });
+</script>
