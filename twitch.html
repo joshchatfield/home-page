@@ -1,0 +1,401 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Lato:100|Tangerine" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel = "icon" href = "http://www.chatfieldcreate.com/favicon">
+</head>
+<body>
+
+
+
+<div class = "container-fluid" id = "container">
+    <div class = "row" id = "titleRow">
+      <a target = "blank" href = "http://www.chatfieldcreate.com"><img id = "icon" src = "http://www.chatfieldcreate.com/chatfieldcreateicon"></a>
+      Twitch.tv
+    </div>
+    <div class = "row" id = "headerRow">
+        <div class = "col-xs-4" id = "leftHeader">
+            All
+        </div>
+        <div class = "col-xs-4" id = "middleHeader">
+            Online
+        </div>
+        <div class = "col-xs-4" id = "rightHeader">
+            Offline
+        </div>
+    </div>
+    <div class = "row" id = "searchRow">
+        <input type = "text" class = "form-control" placeholder = "search" id = "searchInput"></input>
+    </div>
+    <div class = "row" id = "bodyRow">
+        
+    </div>
+</div>
+
+
+
+<img id = "logo" src = "http://www.chatfieldcreate.com/chatfieldcreatelogo">
+
+<style>
+    #logo{
+        margin-left:45%;
+        position:absolute;
+    }
+#icon{
+  position:absolute;
+  top:10px;
+  left:0px;
+  width:50px;
+}
+#container{
+  position:relative;
+    margin-top:10%;
+    margin-bottom:5%;
+    margin-right:auto;
+    margin-left:auto;
+    box-shadow: 0px 0px 5px black;
+  min-width: 280px;  
+  max-width:500px;
+}
+#titleRow{
+    text-align: center;
+    font-size:50px;
+    color: white;
+    background:brown;
+    font-family: "lato",sans-serif;
+}
+#headerRow{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    right:0px;
+
+}
+#leftHeader{
+    background-color:brown;
+    transition: font-weight 1s;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+#leftHeader:hover{
+    box-shadow: 0px 0px 5px black;
+    font-weight:bold;
+    z-index:1;
+}
+#leftHeader:active{
+    box-shadow: 0px 0px 10px white;    
+}
+#middleHeader{
+    background-color:brown;
+    transition: font-weight 1s;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+#middleHeader:hover{
+    box-shadow: 0px 0px 5px black;
+    font-weight:bold;
+    z-index:1;
+}
+#middleHeader:active{
+    box-shadow: 0px 0px 10px white;    
+}
+#rightHeader{
+    background-color:brown;
+    transition: font-weight 1s;
+    right:0px;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    
+}
+#rightHeader:hover{
+    box-shadow: 0px 0px 5px black;
+    font-weight:bold;
+    z-index:1;
+}
+#rightHeader:active{
+    box-shadow: 0px 0px 10px white;    
+}
+#searchRow{
+    background: brown;
+}
+#searchInput{
+    width:78%;
+    transition: width .2s;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:30px;
+    margin-bottom:50px;
+    box-shadow: 0px 0px 5px black;
+}
+#searchInput:hover{
+width:80%;
+}
+#searchInput:active{
+    box-shadow:0px 0px 10px white;
+}
+#bodyRow{
+    color:brown;
+    text-align:left;
+    padding: 5px;
+}
+.bold{
+    font-weight:bold;
+    font-size:22px;
+}
+.smallText{
+    font-size:18px;
+}
+</style>
+
+
+<script>
+var twitchExample = [{
+    "stream": {
+      "mature": false,
+      "status": "Greg working on Electron-Vue boilerplate w/ Akira #programming #vuejs #electron",
+      "broadcaster_language": "en",
+      "display_name": "FreeCodeCamp",
+      "game": "Creative",
+      "language": "en",
+      "_id": 79776140,
+      "name": "freecodecamp",
+      "created_at": "2015-01-14T03:36:47Z",
+      "updated_at": "2016-09-17T05:00:52Z",
+      "delay": null,
+      "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-d9514f2df0962329-300x300.png",
+      "banner": null,
+      "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-channel_offline_image-b8e133c78cd51cb0-1920x1080.png",
+      "background": null,
+      "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_banner-6f5e3445ff474aec-480.png",
+      "profile_banner_background_color": null,
+      "partner": false,
+      "url": "https://www.twitch.tv/freecodecamp",
+      "views": 161989,
+      "followers": 10048,
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/channels/freecodecamp",
+        "follows": "https://api.twitch.tv/kraken/channels/freecodecamp/follows",
+        "commercial": "https://api.twitch.tv/kraken/channels/freecodecamp/commercial",
+        "stream_key": "https://api.twitch.tv/kraken/channels/freecodecamp/stream_key",
+        "chat": "https://api.twitch.tv/kraken/chat/freecodecamp",
+        "subscriptions": "https://api.twitch.tv/kraken/channels/freecodecamp/subscriptions",
+        "editors": "https://api.twitch.tv/kraken/channels/freecodecamp/editors",
+        "teams": "https://api.twitch.tv/kraken/channels/freecodecamp/teams",
+        "videos": "https://api.twitch.tv/kraken/channels/freecodecamp/videos"
+      }
+    },
+    "_links": {
+      "self": "https://api.twitch.tv/kraken/streams/freecodecamp",
+      "channel": "https://api.twitch.tv/kraken/channels/freecodecamp"
+    }
+  },
+
+  {
+    "stream": null,
+    "display_name": "OgamingSC2",
+    "_links": {
+      "self": "https://api.twitch.tv/kraken/streams/ogamingsc2",
+      "channel": "https://api.twitch.tv/kraken/channels/ogamingsc2"
+    }
+  },
+
+  {
+    "stream": {
+      "mature": false,
+      "status": "RERUN: StarCraft 2 - Kane vs. HuK (ZvP) - WCS Season 3 Challenger AM - Match 4",
+      "broadcaster_language": "en",
+      "display_name": "ESL_SC2",
+      "game": "StarCraft II",
+      "language": "en",
+      "_id": 30220059,
+      "name": "esl_sc2",
+      "created_at": "2012-05-02T09:59:20Z",
+      "updated_at": "2016-09-17T06:02:57Z",
+      "delay": null,
+      "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_image-d6db9488cec97125-300x300.jpeg",
+      "banner": null,
+      "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-channel_offline_image-5a8657f8393c9d85-1920x1080.jpeg",
+      "background": null,
+      "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_banner-f8295b33d1846e75-480.jpeg",
+      "profile_banner_background_color": "#050506",
+      "partner": true,
+      "url": "https://www.twitch.tv/esl_sc2",
+      "views": 60843789,
+      "followers": 135275,
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/channels/esl_sc2",
+        "follows": "https://api.twitch.tv/kraken/channels/esl_sc2/follows",
+        "commercial": "https://api.twitch.tv/kraken/channels/esl_sc2/commercial",
+        "stream_key": "https://api.twitch.tv/kraken/channels/esl_sc2/stream_key",
+        "chat": "https://api.twitch.tv/kraken/chat/esl_sc2",
+        "subscriptions": "https://api.twitch.tv/kraken/channels/esl_sc2/subscriptions",
+        "editors": "https://api.twitch.tv/kraken/channels/esl_sc2/editors",
+        "teams": "https://api.twitch.tv/kraken/channels/esl_sc2/teams",
+        "videos": "https://api.twitch.tv/kraken/channels/esl_sc2/videos"
+      }
+    },
+    "_links": {
+      "self": "https://api.twitch.tv/kraken/streams/esl_sc2",
+      "channel": "https://api.twitch.tv/kraken/channels/esl_sc2"
+    }
+  },
+
+  {
+    "stream": null,
+    "display_name": "noobs2ninjas",
+    "_links": {
+      "self": "https://api.twitch.tv/kraken/streams/esl_sc2",
+      "channel": "https://api.twitch.tv/kraken/channels/esl_sc2"
+    }
+  },
+
+  {
+    "error": "Not Found",
+    "status": 404,
+    "message": "Channel 'not-a-valid-account' does not exist"
+  }
+];
+
+
+var search = "";
+//CLICKING THE THREE HEADERS
+
+//doc ready and setting globals
+$(document).ready(function() {
+  var currentList = [];
+  var currentSearch = [];
+  var currentSearchString = "";
+  var toPush = [];
+  var trigger;
+
+  //on page load I want it to be in the "all" category
+  $(".removeable").remove();
+  currentList.length = 0;
+  currentSearch.length = 0;
+  document.getElementById("leftHeader").style.backgroundColor = "red";
+  document.getElementById("middleHeader").style.backgroundColor = "brown";
+  document.getElementById("rightHeader").style.backgroundColor = "brown";
+  document.getElementById("searchInput").placeholder = "Search 'All'";
+
+  for (var i = 0; i < 5; i++) {
+    if (twitchExample[i].error != "Not Found") {
+      if (twitchExample[i].stream === null) {
+        $("#bodyRow").append("<span class = 'bold removeable'><br>" + twitchExample[i].display_name + "<br></span><span class = 'smallText removeable'>offline.<br></span>");
+
+        toPush = [twitchExample[i].display_name, "offline"];
+        currentList.push(toPush);
+
+      } else {
+        $("#bodyRow").append("<span class = 'bold removeable'><br>" + twitchExample[i].stream.display_name + "</span><span class = 'smallText removeable'><br>" + twitchExample[i].stream.status + "<br></span>");
+
+        toPush = [twitchExample[i].stream.display_name, twitchExample[i].stream.status];
+        currentList.push(toPush);
+      }
+    }
+  }
+
+  $("#leftHeader").click(function() {
+    $(".removeable").remove();
+    currentList.length = 0;
+    currentSearch.length = 0;
+    document.getElementById("leftHeader").style.backgroundColor = "red";
+    document.getElementById("middleHeader").style.backgroundColor = "brown";
+    document.getElementById("rightHeader").style.backgroundColor = "brown";
+    document.getElementById("searchInput").placeholder = "Search 'All'";
+
+    for (var i = 0; i < 5; i++) {
+      if (twitchExample[i].error != "Not Found") {
+        if (twitchExample[i].stream === null) {
+          $("#bodyRow").append("<span class = 'bold removeable'><br>" + twitchExample[i].display_name + "<br></span><span class = 'smallText removeable'>offline.<br></span>");
+
+          toPush = [twitchExample[i].display_name, "offline"];
+          currentList.push(toPush);
+
+        } else {
+          $("#bodyRow").append("<span class = 'bold removeable'><br>" + twitchExample[i].stream.display_name + "</span><span class = 'smallText removeable'><br>" + twitchExample[i].stream.status + "<br></span>");
+
+          toPush = [twitchExample[i].stream.display_name, twitchExample[i].stream.status];
+          currentList.push(toPush);
+        }
+      }
+    }
+  });
+
+  $("#middleHeader").click(function() {
+    $(".removeable").remove();
+    currentList.length = 0;
+    currentSearch.length = 0;
+    document.getElementById("leftHeader").style.backgroundColor = "brown";
+    document.getElementById("middleHeader").style.backgroundColor = "red";
+    document.getElementById("rightHeader").style.backgroundColor = "brown";
+    document.getElementById("searchInput").placeholder = "Search 'Online'";
+
+    for (var i = 0; i < 5; i++) {
+
+      if (twitchExample[i].stream != null) {
+        $("#bodyRow").append("<span class = 'bold removeable'><br>" + twitchExample[i].stream.display_name + "</span><span class = 'smallText removeable'><br>" + twitchExample[i].stream.status + "<br></span>");
+
+        toPush = [twitchExample[i].stream.display_name, twitchExample[i].stream.status];
+        currentList.push(toPush);
+      }
+    }
+  });
+
+  $("#rightHeader").click(function() {
+    $(".removeable").remove();
+    currentList.length = 0;
+    currentSearch.length = 0;
+    document.getElementById("leftHeader").style.backgroundColor = "brown";
+    document.getElementById("middleHeader").style.backgroundColor = "brown";
+    document.getElementById("rightHeader").style.backgroundColor = "red";
+    document.getElementById("searchInput").placeholder = "Search 'Offline'";
+    //search = document.getElementByID("searchInput").value;
+
+    for (var i = 0; i < 5; i++) {
+
+      if (twitchExample[i].stream === null) {
+        $("#bodyRow").append("<span class = 'bold removeable'><br>" + twitchExample[i].display_name + "<br></span><span class = 'smallText removeable'>offline<br></span>");
+
+        toPush = [twitchExample[i].display_name, "offline"];
+        currentList.push(toPush);
+      }
+    }
+  });
+
+  //SEARCHING
+  //on keydown
+  $("#searchInput").keyup(function(event) {
+    $(".removeable").remove();
+    search = document.getElementById("searchInput").value;
+    console.log(search);
+
+    //comparing Search and currentList after each keydown
+    trigger = false;
+    if (search != "") {
+      for (var i = 0; i < currentList.length; i++) {
+        if (currentList[i][0].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+          $("#bodyRow").append('<span class = "bold removeable"><br>' + currentList[i][0] + '</span><span class = "smallText removeable"><br>' + currentList[i][1] + '<br></span>');
+          trigger = true;
+        }
+      }
+      if (trigger == false) {
+        $("#bodyRow").html("<span class = 'bold removeable'><br>No Matches Found</span>");
+      }
+    } else {
+      for (var i = 0; i < currentList.length; i++) {
+        $("#bodyRow").append('<span class = "bold removeable"><br>' + currentList[i][0] + '</span><span class = "smallText removeable"><br>' + currentList[i][1] + '<br></span>');
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+

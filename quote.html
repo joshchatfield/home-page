@@ -1,0 +1,92 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Lato:100|Tangerine" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel = "icon" href = "http://www.chatfieldcreate.com/favicon">
+</head>
+<body>
+
+<a href = "http://www.chatfieldcreate.com"><img id = "icon" src = "http://www.chatfieldcreate.com/chatfieldcreateicon"></a>
+  <div id = "title">
+Random Quote Machine
+</div>
+<br>
+<br>
+<br>
+
+<div class = "message1"></div>
+<br>
+<div class = "message2"></div>
+
+<br>
+<div style = "text-align: center;">
+<button class = "button">
+Get Quote
+</button>
+</div>
+</body>
+</html>
+
+
+
+
+<img id = "logo" src = "http://www.chatfieldcreate.com/chatfieldcreatelogo">
+<style>
+	#logo{
+		margin-left:45%;
+		position:absolute;
+		margin-top:50px;
+	}
+	#icon{
+  padding-top:10px;
+  padding-bottom:
+    10px;
+  width:50px;
+  background:crimson;
+}
+#title{
+	text-align: center;
+	font-size: 60px;
+}
+.message1{
+	text-align: center;
+	font-size: 22px;
+}
+.message2{
+	text-indent: 60px;
+	font-size: 28px;
+	text-align: right;
+	margin-right: 30%;	
+}
+
+body{
+	margin-top: 0px;
+}
+.button{
+	font-size: 20px;
+} 
+	</style>
+	<script>
+		$("document").ready(function(){
+$(".button").on("click", function(){
+	$.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?", function(json){
+
+	$(".message1").html(''+json[0].content+'<span><br>');
+	if(json[0].title == null){
+	$(".message2").html("-"+Anonymous);
+
+	}else{
+	$(".message2").html("-"+json[0].title);
+		}
+		});
+	});
+});
+
+		</script>
+
+</body>
+</html>
+

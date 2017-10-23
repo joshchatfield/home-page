@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<a href = "http://www.chatfieldcreate.com"><img id = "icon" src = "http://www.chatfieldcreate.com/chatfieldcreateicon"></a>
+<div class = "container">
+	<div class = "row title">
+		<p> loading, please wait...</p>
+	</div>
+	<div class = "row image">
+	</div>
+	<div class = "row description">
+	</div>
+	<div class = "row temp">
+	</div>
+	<div class = "row">
+		<button id = "button">
+		</button>
+	</div>
+	<div class = "row windSpeed">
+	</div>
+		
+</div>
+</body>
+<style>
+#icon{
+background:crimson;
+width:50px;
+margin:10px;
+padding-top:10px;
+padding-bottom:10px;
+}
+.title{
+	font-size: 40px;
+	margin-top: 10px;
+}
+.container{
+	opacity: 0.7;
+	
+	text-align: center;
+	background-color: #ccf;
+	min-width: 280px;
+	max-width: 500px;
+	border-radius: 10%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #77f;
+
+}
+.button{
+	margin-bottom: 20px;
+}
+.description{
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+.temp{
+	font-size: 30px;
+}
+.windSpeed{
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+body{
+	background-size: cover;
+	background: fixed center no-repeat;
+}
+</style>
+<script>
+var isFerenheit = true;
+console.log("outside doc.ready "+isFerenheit);
+
+$("document").ready(function(){
+    	var navAddress = "https://api.apixu.com/v1/current.json?key=f26a8406e424451fb96161244170102&q=auto:ip";
+  		$.getJSON(navAddress, function(json){
+  		  	$(".title").html(json.location.name+", "+json.location.region);
+  		  	
+			$(".temp").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+  		  	
+			$(".description").html(json.current.condition.text);
+  		  	$(".windSpeed").html("wind speed: "+json.current.wind_mph+" mph");
+  		  	$(".image").append('<img src = "http:'+json.current.condition.icon+'">');
+  		  	
+			var buttonString = String.fromCharCode(176)+"C / "+String.fromCharCode(176)+"F";	
+			$("#button").html(buttonString);
+
+						//button: toggle F and C
+  		  	$("#button").click(function(){
+					console.log("just above the if "+isFerenheit);
+					if(isFerenheit === false){
+					$(".temp").html(json.current.temp_f+" "+String.fromCharCode(176)+"F");
+					isFerenheit = true;
+					console.log("inside the false clause of if, after reassignment to true "+isFerenheit)
+				}else if(isFerenheit === true){
+					$(".temp").html(json.current.temp_c+" "+String.fromCharCode(176)+"C");
+					isFerenheit = false;
+					console.log("inside the not false statement of if after reassignment to false "+isFerenheit)
+						}
+					});
+				
+				if(json.current.temp_f>85){
+					$("body").css({"background": 'url("http://newtopwallpapers.com/wp-content/uploads/2013/06/Hot-Desert-Sun-Wallpaper.jpg") fixed center no-repeat', "background-size": "cover"});
+  		  	}
+				if(json.current.temp_f<=85 && json.current.temp_f>=65){
+					$("body").css({"background": 'url("http://cdn.wallpapersafari.com/36/61/ktNZFo.jpg") fixed center no-repeat','background-size': "cover"});
+  		  	}
+				if(json.current.temp_f<65 && json.current.temp_f>=40){
+					$("body").css({"background": 'url("http://images6.fanpop.com/image/photos/35800000/Autumn-Wallpaper-autumn-35867751-1280-800.jpg") fixed center no-repeat','background-size': "cover"});
+  		  	}
+				if(json.current.temp_f<40){
+  		  		$("body").css({"background": 'url("http://wallpapercave.com/wp/sQvGpeF.jpg") fixed center no-repeat', 'background-size':'cover'});
+  		  	}
+
+  		  	
+  		  });
+    });
+</script>
+</html>

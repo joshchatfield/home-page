@@ -1,0 +1,140 @@
+</html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<a href = "http://www.chatfieldcreate.com"><img id = "icon" src = "http://www.chatfieldcreate.com/chatfieldcreateicon"></a>
+<div class = "mainTitle">
+Wikipedia Search
+</div>
+
+
+<div class = "searchDivider">
+	<span class = "fa fa-search"></span>
+<input type = "text" class = "form-control" placeholder = "search Wikipedia" id = "usr">
+
+</input>
+<!--<button id = "searchButton" class = "btn btn-primary" onclick = "getSearchText()">Search
+</button>-->
+</div>
+<style>
+#icon{
+background: crimson;
+margin-top:20px;
+margin-bottom:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+#topBorder {
+  margin: 50px;
+}
+#usr {
+	color:#55b;
+  box-shadow: 0px 0px 5px black;
+  transition: box-shadow 1s;
+  
+}
+#usr:hover{
+  box-shadow: 0px 0px 20px #55b;
+}
+body {
+	background-color:;
+}
+.mainTitle {
+  
+	font-family:'Times New Roman', Times, serif;
+  font-weight:;
+	font-size:60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	background-color:#fff;
+	color:#99f;
+	box-shadow:0px 1px 12px #000;
+  text-shadow: 2px 2px 5px #50f;
+}
+.sectionTitle {
+	font-weight:bold;
+	font-size: 18px;
+}
+
+.results {
+  max-width:500px;
+  min-width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom:10px;
+	padding:10px;
+	background-color:#eef;
+	text-decoration:none;
+}
+.topic {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:10px;
+	min-width:280px;
+  max-width:500px;
+	text-align: center;
+	font-size: 22px;
+	font-family:'Times New Roman', Times, serif;
+	background-color:#eef;
+	color: #369;
+}
+.searchDivider {
+	max-width:300px;
+  min-width: 280px;
+  margin-left:auto;
+  margin-right:auto;
+	margin-bottom:20px;
+	margin-top:50px;
+	text-align:center;
+	position: relative;
+}
+.searchDivider input {
+	text-indent:20px;
+}
+.searchDivider .fa-search {
+	position: absolute;
+	left:10px;
+	top:10px;
+}
+</style>
+<script>
+//pressing enter in the text box will call getSearchText()
+$(document).ready(function(){
+	$(".form-control").keydown(function(event){
+		if(event.keyCode == 13) {
+			getSearchText();
+		}
+	});
+});
+
+function getSearchText(){
+	$(".removeable").remove();
+	var x = document.getElementById("usr").value; //x is the user input
+	var address = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+x+"&origin=*"; //address to search for user input
+	$.getJSON(address, function(json){ //getting json for user input
+	
+	//displaying json for user input
+		var t = json[0].charAt(0).toUpperCase() + json[0].slice(1);
+		$("body").append('<div class = "removeable well topic">Results for "'+t+'"</div>');
+	
+		if(json[1] == ""){
+			$("body").append("<h3 align = 'center' class ='removeable well results'>No results<h3>");
+		}else{
+			for(var i = 0;i<json[1].length;i++){
+				$("body").append("<div class = 'removeable well results'><a href = "+json[3][i]+"><span class = 'sectionTitle'>"+json[1][i]+"</span><br><br>"+json[2][i]+"</a></div>");
+			}
+		}
+	});
+}
+</script>
+</body
+</html>
