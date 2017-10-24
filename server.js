@@ -15,8 +15,8 @@ var app = express();
 app.get('/', function(req, res) {
 	res.sendFile('index.html', {root: "/root/awesome-test/"});
 	});
-app.get('/weather',function(req,res){
-	res.sendFile('weather.html', {root: '/root/awesome-test/'});
+app.get('/weather2',function(req,res){
+	res.sendFile('weather2.htm', {root: '/root/awesome-test/'});
 	});
 
 app.get('/wikipedia',function(req,res){
