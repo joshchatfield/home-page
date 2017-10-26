@@ -1,124 +1,346 @@
 
 <html>
 <head>
+    <!-- 
 
+
+     -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100|Tangerine" rel="stylesheet">
-
     <meta name=viewport content="width=device-width, initial-scale=1">
-    
     <link rel = "icon" href = "http://www.chatfieldcreate.com/favicon">
-
 </head>
+<style>
+        
+    body{
+        margin:0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    
+    header{
+        box-shadow:0 0 10px;
+        width:100%;
+        position:fixed;
+        top:0px;
+        margin:0;
+        padding:10px;
+        z-index:5;
+        background:white;
+    }
 
+    .outerContainer{
+        width: 950px;
+        margin: auto;
+        margin-top: 150px;
+    }
+
+    .container{
+        border: 1px solid black;
+        width:700px;
+        padding: 20px;
+        float: right;
+    }
+    
+    #icon{
+        width:50px;
+    }
+    
+    h1{
+        font-family: Lato;
+        font-size:35px;
+        text-align:center;
+    }
+
+    h2, h3{
+        text-align: center;
+    }
+    
+    #khenpoContainer{
+        text-align:center;
+        margin:50px;
+    }
+    
+    #khenpo{
+        box-shadow: 0 0 10px;
+        border-radius:50%;
+    }
+
+    aside{
+        width: 200px;
+        z-index: 3;
+        border: 1px solid black;
+        background: white;
+
+        float: right;
+        position: relative;
+        right: 50px;
+        top: 100px;
+    }
+
+    aside li{
+        list-style: none;
+        border-left: 1px solid white;
+        padding: 5px;
+        text-indent: none;
+        margin: none;
+    }
+
+    aside ul{
+        margin: none;
+        padding: none;
+        text-indent: none;
+    }
+
+    aside a{
+        text-decoration: none;
+        color: black;
+    }
+
+    aside li:hover{
+        border-left: 1px solid blue; 
+    }
+
+    /* below is the changing part of the page */
+
+    section{
+        display: none;
+        margin: 20px;
+    }
+
+    strong{
+        display: block;
+        margin: 10px;
+    }
+
+    #monestaryPicture{
+        display: block;
+        margin: auto;
+    }
+        
+</style>
 <body>
     <header>
         <a href = "http://www.chatfieldcreate.com"><img id = "icon" src = "http://www.chatfieldcreate.com/chatfieldcreateicon"></a>
     </header>
 
+    <div class = "outerContainer">
+
+    <aside>
+        <ul>
+            <li><a href = "#" onclick="openHistorySection()">A Brief History</a></li>
+
+            <li><a href = "#" onclick="openPithTeachingsSection()">Pith Teachings</a></li>
+            
+            <li><a href = "#" onclick="openDzogchenValleySection()">The Dzogchen Valley</a></li>
+            
+            <li><a href = "#" onclick = "openNyingmaSection()">Nyingma</a></li>
+            
+            <li><a href = "#" onclick = "openDzogchenTeachingsSection()">Dzogchen Teachings</a></li>
+            
+            <li><a href="#" onclick = "openAdditionalInformationSection()">Additional Information</a></li>
+        </ul>
+    </aside>
+
     <div class = "container">
 
-	<div class = "row">
-	<div id = "title">
-      H.E. Dzogchen Khenpo Choga Rinpoche
-  	</div>
-	<div id = "subTitle">
-Buddhist Meditation Master and Authentic Dzogchen Lineage Holder
-	</div>
-	</div>
-<div id = "khenpoContainer"> 
-    <img id = "khenpo" src="http://www.dzogchenbuddha.org/images/dkcr-clouds.jpg">
-</div>
-<div class = "row">
-<p id = "listTitle">
-    A Brief History
-</p>
-</div>
-<div class = "row" id = "list">
-<ul>
-        <li>Rinpoche attended the Dzogchen Shri Singha University in Tibet</li>
-        <li>He graduated at the amazingly young age of 21 years old</li>
-        <li>He completed his seven years solitary cave retreat in the Dzogchen Valley</li>
-        <li>He was given the prestigious title of "Dzogchen Lineage Holder" by his teachers, who are lineage holders themselves</li>
-        <li>His teachers encouraged him to travel to the US in order to teach Buddhism in English</li>
-        <p class = "date">Beginning in 2000</p>
-        <li>He traveled around the US, teaching, picking up students and learning English</li>
-        <li>The Dzogchen Shri Singha Foundation, USA was founded in order to support Rinpoche's activities</li>
-        <p class = "date">Beginning in 2008</p>
-        <li>The DSSF purchased a 100+ acre retreat land</li>
-        <li>The retreat land is now thriving and hosts multiple events each year</li>
-        <li>Rinpoche's main activities now consitst of editing his books in English with the help of his students, and training teachers who have committed themselves to the retreat center
-      </ul>
-      
-</div>
-<div class = "row">
-    <p id = "teachingTitle">
-    Pith Teachings
-    </p>
-</div>
-<div class = "row">
-    <p id = "teachings">Positive thinking is to be adopted and negative thinking is to be abandoned. Positive thinking is: renunciation, compassion, faith, love, and wisdom. Negative thinking is: anger, jealousy, greed, pride, and ignorance.<br>
-    Renunciation is reducing one's own negative thinking. Compassion is reducing other's negative thinking. Faith is recognizing positive thinking as the cause of one's own happiness. Love is recognizing other's positive thinking as the cause of their happiness and wanting it to increase. Wisdom is clearly seeing reality as it is.<br>
-    Anger is wanting other's to suffer. Jealousy is liking other's suffering and not liking their happiness. Greed is identifying anything besides one's own positive thinking as the cause of happiness. Pride is comparing yourself to others in any way that keeps you from improving through renouncing your negative thinking. Ignorance is not seeing reality clearly.
-    </p>
-</div>
-<div class = "row">
-<p id = "additionalInfo">
-    Additional information about Dzogchen Khenp Choga Rinpoche can be found on the <a href = "http://www.dzogchenlineage.org/">Dzogchen Shri Singha's website.</a>
-</p>
+        <!-- Title -->
+        <h1>H.E. Dzogchen Khenpo Choga Rinpoche</h1>
+        <h3>Buddhist Meditation Master and Authentic Dzogchen Lineage Holder</h3>
+        <figure id = "khenpoContainer"> 
+        <img id = "khenpo" src="http://www.dzogchenbuddha.org/images/dkcr-clouds.jpg">
+        </figure>
 
-</div>
+        <!-- History -->
+        <section id = "historySection">
+            <h3>A Brief History</h3>
+            <ul>
+                <li>Rinpoche attended the Dzogchen Shri Singha University in Tibet</li>
+                <li>He graduated at the amazingly young age of 21 years old</li>
+                <li>He completed his seven years solitary cave retreat in the Dzogchen Valley</li>
+                <li>He was given the prestigious title of "Dzogchen Lineage Holder" by his teachers, who are lineage holders themselves</li>
+                <li>His teachers encouraged him to travel to the US in order to teach Buddhism in English</li>
+                <strong>Beginning in 2000</strong>
+                <li>He traveled around the US, teaching, picking up students and learning English</li>
+                <li>The Dzogchen Shri Singha Foundation, USA was founded in order to support Rinpoche's activities</li>
+                <strong>Beginning in 2008</strong>
+                <li>The DSSF purchased a 100+ acre retreat land</li>
+                <li>The retreat land is now thriving and hosts multiple events each year</li>
+                <li>Rinpoche's main activities now consitst of editing his books in English with the help of his students, and training teachers who have committed themselves to the retreat center
+            </ul>
+        </section>
 
+        <!-- Teachings -->
+        <section id = "pithTeachingsSection">
+            <article>
+                <h3>Pith Teachings </h3>
+                <p>Positive thinking is to be adopted and negative thinking is to be abandoned. Positive thinking is: renunciation, compassion, faith, love, and wisdom. Negative thinking is: anger, jealousy, greed, pride, and ignorance.</p>
 
-<style>
+                <p>Renunciation is reducing one's own negative thinking. Compassion is reducing other's negative thinking. Faith is recognizing positive thinking as the cause of one's own happiness. Love is recognizing other's positive thinking as the cause of their happiness and wanting it to increase. Wisdom is clearly seeing reality as it is.</p>
+                
+                <p>Anger is wanting other's to suffer. Jealousy is liking other's suffering and not liking their happiness. Greed is identifying anything besides one's own positive thinking as the cause of happiness. Pride is comparing yourself to others in any way that keeps you from improving through renouncing your negative thinking. Ignorance is not seeing reality clearly.</p>
+            </article>
+        </section>
 
-body{
-    margin:0;
-    padding:0;
-}
+        <section id = "dzogchenValleySection">
+                <article>
+                    <h3>Dzogchen Valley</h3>
+                    <figure>
+                        <img src = "dzogchen-monestary.jpg" id = "monestaryPicture">
+                    </figure>
+                    <p></p>
+                </article>
+        </section>
 
-header{
-    box-shadow:0 0 10px;
-    width:100%;
-    position:fixed;
-    top:0px;
-    margin:0;
-    padding:10px;
-    z-index:2;
-    background:white;
-}
+        <section id = "nyingmaSection">
+                <article>
+                    <h3>Nyingma</h3>
+                    <p></p>
+                </article>
+        </section>
 
-.container{
-    width:600px;
-    margin:200px auto 0 auto;
-}
+        <section id = "dzogchenTeachingsSection">
+            <article>
+                <h3>Dzogchen Teachings</h3>
+                <p></p>
+            </article>
+        </section>
 
-#icon{
-    width:50px;
-}
-
-#title{
-    font-family: Lato;
-    font-size:35px;
-    text-align:center;
-}
-
-#subTitle{
-    text-align:center;
-    font-size:20px;
-}
-
-#khenpoContainer{
-    text-align:center;
-    margin:20px;
-}
-
-#khenpo{
-    box-shadow: 0 0 10px;
-    border-radius:50%;
-}
-
-</style>
-
+        <!-- additional information -->
+        <section id = "additionalInformationSection">
+            <article>
+            <h3>Additional Information</h3>
+                <p>Additional information about Dzogchen Khenp Choga Rinpoche can be found on the <a href = "http://www.dzogchenlineage.org/">Dzogchen Shri Singha's website.</a></p>
+            </article>
+        </section>
+        
+    </div>
+    </div>
 </body>
+
+<script>
+
+    function openHistorySection(){
+        
+        if(document.getElementById("historySection").style.display != "block"){
+            
+            document.getElementById("historySection").style.display = "block";
+
+            document.getElementById("pithTeachingsSection").style.display = "none";
+
+            document.getElementById("dzogchenValleySection").style.display = "none";
+            
+            document.getElementById("nyingmaSection").style.display = "none";
+            
+            document.getElementById("dzogchenTeachingsSection").style.display = "none";
+            
+            document.getElementById("additionalInformationSection").style.display = "none";
+        }else{
+            document.getElementById("historySection").style.display = "none";
+        }
+    }
+
+    function openPithTeachingsSection(){
+        
+        if(document.getElementById("pithTeachingsSection").style.display != "block"){
+            
+            document.getElementById("historySection").style.display = "none";
+
+            document.getElementById("pithTeachingsSection").style.display = "block";
+
+            document.getElementById("dzogchenValleySection").style.display = "none";
+            
+            document.getElementById("nyingmaSection").style.display = "none";
+            
+            document.getElementById("dzogchenTeachingsSection").style.display = "none";
+            
+            document.getElementById("additionalInformationSection").style.display = "none";
+        }else{
+            document.getElementById("pithTeachingsSection").style.display = "none";
+        }
+    }
+
+    function openDzogchenValleySection(){
+        
+        if(document.getElementById("dzogchenValleySection").style.display != "block"){
+            
+            document.getElementById("historySection").style.display = "none";
+
+            document.getElementById("pithTeachingsSection").style.display = "none";
+
+            document.getElementById("dzogchenValleySection").style.display = "block";
+            
+            document.getElementById("nyingmaSection").style.display = "none";
+            
+            document.getElementById("dzogchenTeachingsSection").style.display = "none";
+            
+            document.getElementById("additionalInformationSection").style.display = "none";
+        }else{
+            document.getElementById("dzogchenValleySection").style.display = "none";
+        }
+    }
+
+    function openNyingmaSection(){
+        
+        if(document.getElementById("nyingmaSection").style.display != "block"){
+            
+            document.getElementById("historySection").style.display = "none";
+
+            document.getElementById("pithTeachingsSection").style.display = "none";
+
+            document.getElementById("dzogchenValleySection").style.display = "none";
+            
+            document.getElementById("nyingmaSection").style.display = "block";
+            
+            document.getElementById("dzogchenTeachingsSection").style.display = "none";
+            
+            document.getElementById("additionalInformationSection").style.display = "none";
+        }else{
+            document.getElementById("nyingmaSection").style.display = "none";
+        }
+    }
+
+    function openDzogchenTeachingsSection(){
+        
+        if(document.getElementById("dzogchenTeachingsSection").style.display != "block"){
+            
+            document.getElementById("historySection").style.display = "none";
+
+            document.getElementById("pithTeachingsSection").style.display = "none";
+
+            document.getElementById("dzogchenValleySection").style.display = "none";
+            
+            document.getElementById("nyingmaSection").style.display = "none";
+            
+            document.getElementById("dzogchenTeachingsSection").style.display = "block";
+            
+            document.getElementById("additionalInformationSection").style.display = "none";
+        }else{
+            document.getElementById("dzogchenTeachingsSection").style.display = "none";
+        }
+    }
+
+    function openAdditionalInformationSection(){
+        
+        if(document.getElementById("additionalInformationSection").style.display != "block"){
+            
+            document.getElementById("historySection").style.display = "none";
+
+            document.getElementById("pithTeachingsSection").style.display = "none";
+
+            document.getElementById("dzogchenValleySection").style.display = "none";
+            
+            document.getElementById("nyingmaSection").style.display = "none";
+            
+            document.getElementById("dzogchenTeachingsSection").style.display = "none";
+            
+            document.getElementById("additionalInformationSection").style.display = "block";
+        }else{
+            document.getElementById("additionalInformationSection").style.display = "none";
+        }
+    }
+
+</script>
+
+
 </html>
 
