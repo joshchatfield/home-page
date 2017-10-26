@@ -1,28 +1,145 @@
 <html>
-  
   <head>
+
     <link rel="icon" href="http://www.chatfieldcreate.com/favicon">
-    <title>
-      ChatfieldCreate
-    </title>
+    
+    <title>ChatfieldCreate</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Lato:100|Tangerine" rel="stylesheet">
+    
     <meta name="viewport" content="width=divice-width, initial-scale=1">
     
+    <style>
+        
+        /* top buttons */
+        
+            #icon {
+              background: crimson;
+              padding-top: 15px;
+              padding-bottom: 15px;
+              position: absolute;
+              top: 10px;
+              left: 20px;
+              border-radius: 50%;
+              box-shadow: 0 0 20px black;
+              transition: transform .5s;
+            }
+            
+            #menu {
+              box-shadow: 0 0 20px black;
+              background: crimson;
+              padding-left: 15px;
+              padding-right: 15px;
+              font-size: 50px;
+              right: 40px;
+              top: 10px;
+              position: absolute;
+              border-radius: 50%;
+              animation: transform;
+              transition: transform .5s;
+            }
+        
+            #icon:hover {
+              opacity: .9;
+              transform: rotate(20deg);
+            }
+        
+            #menu:hover {
+              cursor: pointer;
+              opacity: .9;
+              transform: rotate(20deg);
+            }
+        
+        /* side menu */
+            
+            ul, li {
+              list-style-type: none;
+              list-style-position: inside;
+              margin:0px;
+              padding:0px;
+            }
+        
+            li{
+              padding:10px;
+            }
+        
+            .sideMenu{
+              box-shadow:0 0 20px;
+              position:fixed;
+              background:white;
+              width:250px;
+              height:500px;
+              font-size:18px;
+            }
+            
+            #mainSideMenu{
+              right:10px;
+              top:100px;
+              z-index:4;
+              display:none;
+            }
+        
+            .mainMenuOption:hover{
+              
+              font-weight:bold;
+              cursor: pointer;
+            }
+        
+            .secondarySideMenu{
+              box-shadow: 0 0 0px black;
+              right: 260px;
+              top: 100px;
+              background:crimson;
+              z-index: 4;
+              height: 500px;
+              display:none;
+            }
+        
+            .secondarySideMenu li:hover{
+              font-weight: bold;
+            }
+        
+            .secondarySideMenu a{
+              text-decoration: none;
+              color: black;
+            }
+        
+            section{
+              max-width: 700px;
+              margin: 200px auto 20px auto;
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              bottom: 0px;
+              left: 0px;
+              text-align: center;
+            }
+
+            h1{
+              font-family: lato;
+              font-size: 40px;
+              letter-spacing: 9px;
+              padding-right: 4px;
+            }
+
+            h3{
+              padding-left: 2px;
+              font-weight: 200;
+              letter-spacing: 15px;
+            }
+
+            h1, h2, h3{
+              line-height: 5px;
+            }
+
+            #logo{
+              margin-top:50px;
+            }
+          </style>
   </head>
-  
   <body>
-  
-    <div id="closeButton" onClick="closeNav()">&times;
-    </div>
-  
-    <div id="myNav" class="overlay">
-      <div class="overlay-content">
-        <a href="http://www.chatfieldcreate.com/projects">Projects</a>
-        <a href="mailto:joshchatfield@gmail.com">joshchatfield@gmail.com</a>
-      </div>
-    </div>
-  
   
   <!-- main menu -->
   
@@ -61,422 +178,28 @@
           <li><a href="mailto:joshchatfield@gmail.com">joshchatfield@gmail.com</a></li>
         </ul>
     
-    <div class="container-fluid" id="container">
-      <div id="menuBar">
+    
         <div id="iconDiv">
           <a href="http://www.chatfieldcreate.com">
             <img id="icon" src="http://chatfieldcreate.com/chatfieldcreateicon">
           </a>
         </div>
-        <div id="menu" onClick="displaySideMenu()">&#9776;</div>
-      </div>
-      <div id="backgroundImage">
-      </div>
-      <div class="row" id="firstWhiteSpace">
-      </div>
-      <div class="row" id="wholeTitleRow">
-        <div class="row" id="topTitleRow">
-          ChatfieldCreate
+
+        <div id="menu" onClick="displaySideMenu()">&#9776;
         </div>
-        <div class="row" id="bottomTitleRow">
-          Clean Elegant Powerful
-        </div>
-        </div>
-        <a href="#secondWhiteSpace" class="row" id="underTitle">
-          <br />
-          <br />
-          <br />
-          <div id="downArrow">&darr;</div>
-        </a>
-        <div class="row" id="secondWhiteSpace">
-          Result
-        </div>
-        <div class="row" id="firstBodyRow">
-          <div class="col-md-4">
-            <span class="bold">Clean</span>
-            <br> Organized, detail oriented, professionally polished, and finished without exception.
-            <br>
-            <br>
-          </div>
-          <div class="col-md-4">
-            <span class="bold">Elegant</span>
-            <br> Open space; clear, intuitive dividing that is easy for the eyes to follow and the mind to understand.
-            <br>
-            <br>
-          </div>
-          <div class="col-md-4">
-            <span class="bold">Powerful</span>
-            <br> programming that is well-planned with the user in mind; elements are where they are supposed to be and doing what
-            they are supposed to be doing, avoiding frustration.
-            <br>
-            <br>
-          </div>
-        </div>
-        <div class="row" id="thirdWhiteSpace">
-          Thought Process
-        </div>
-        <div class="row" id="secondBodyRow">
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4" id="mantra">
-            <span class="bold">Mantra</span>
-            <br> On a personal level it is important to maintain patience and mastery with our work. On a social level it is important
-            to enjoy doing business, and the people we do business with. We cannot only be helpful when it’s “good for business”,
-            it just has to be a way of thinking.
-          </div>
-          <div class="col-md-4">
-          </div>
-        </div>
-        <div class="row" id="fourthWhiteSpace">
+
+        <section>
+          
+          <h1>Josh Chatfield</h1>
+          <h3>Web Developer</h3>
+
+          <img src="http://www.chatfieldcreate.com/chatfieldcreatelogo" id = "logo">
+
+        </section>
+
+  </body>
   
-          <img src="http://www.chatfieldcreate.com/chatfieldcreatelogo">
-        </div>
-      </div>
-    </body>
-  
-  <style>
-  
-  /* whole site */
-  
-      #container {
-        overflow-x: hidden;
-        overflow-y: hidden;
-      }
-  
-      .bold {
-        font-weight: bold;
-      }
-  
-  /* top buttons */
-  
-      #icon {
-        background: crimson;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        position: absolute;
-        top: 10px;
-        left: 20px;
-        border-radius: 50%;
-        box-shadow: 0 0 20px black;
-        transition: transform .5s;
-      }
-  
-      #closeDiv {
-        position: fixed;
-        top: 10px;
-        right: 25px;
-        width: 80px;
-        border-radius: 50%;
-        z-index: 2;
-        display: none;
-        padding: 0px;
-        box-shadow: 0 0 20px black;
-        transition: transform .5s;
-        background: crimson;
-      }
-  
-      #closeDiv:hover {
-        transform: rotate(20deg);
-      }
-  
-      #closeButton {
-        width:80px;
-        height:80px;
-        background:crimson;
-        border-radius:50%;
-        position: fixed;
-        box-shadow: 0 0 20px black;
-        text-align: center;
-        display: none;
-        font-size: 70px;
-        line-height: 65px;
-        right:22px;
-        top:8px;
-        z-index:3;
-        transition:transform .5s;
-        cursor: pointer;
-      }
-  
-      #closeButton:hover{
-        transform: rotate(20deg);
-      }
-      
-      #menu {
-        box-shadow: 0 0 20px black;
-        background: crimson;
-        padding-left: 15px;
-        padding-right: 15px;
-        font-size: 50px;
-        right: 40px;
-        top: 10px;
-        position: absolute;
-        border-radius: 50%;
-        animation: transform;
-        transition: transform .5s;
-      }
-  
-      #icon:hover {
-        opacity: .9;
-        transform: rotate(20deg);
-      }
-  
-      #menu:hover {
-        cursor: pointer;
-        opacity: .9;
-        transform: rotate(20deg);
-      }
-  
-  /* side menu */
-      
-      ul, li {
-        list-style-type: none;
-        list-style-position: inside;
-        margin:0px;
-        padding:0px;
-      }
-  
-      li{
-        padding:10px;
-      }
-  
-      .sideMenu{
-        box-shadow:0 0 20px;
-        position:fixed;
-        background:white;
-        width:250px;
-        height:500px;
-        font-size:18px;
-      }
-      
-      #mainSideMenu{
-        right:10px;
-        top:100px;
-        z-index:4;
-        display:none;
-      }
-  
-      .mainMenuOption:hover{
-        
-        font-weight:bold;
-        cursor: pointer;
-      }
-  
-      .secondarySideMenu{
-        box-shadow: 0 0 0px black;
-        right: 260px;
-        top: 100px;
-        background:crimson;
-        z-index: 4;
-        height: 500px;
-        display:none;
-      }
-  
-      .secondarySideMenu li:hover{
-        font-weight: bold;
-      }
-  
-      .secondarySideMenu a{
-        text-decoration: none;
-        color: black;
-      }
-  
-      #projectsSideMenu{
-      }
-      
-      #sub-componentsSideMenu{
-      }
-      
-      #blogSideMenu{
-      }
-  
-      #contactSideMenu{
-      }
-  
-  /* overlay */
-  
-      .overlay {
-        opacity: 1;
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: crimson;
-        overflow-y: hidden;
-        transition: 0.5s;
-      }
-  
-      .overlay-content {
-        position: relative;
-        top: 200px;
-        width: 80%;
-        text-align: center;
-        font-family: times;
-        background: white;
-        margin: auto;
-        z-index: 3;
-        opacity: 1;
-        border: 1px solid black;
-      }
-  
-      .overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 60px;
-        color: black;
-        display: block;
-        transition: 0.3s;
-      }
-  
-      .overlay a:hover,
-      .overlay a:focus {
-        color: crimson;
-      }
-  
-  /* body */
-  
-      #firstWhiteSpace {
-        height: 150PX;
-        background: white;
-        opacity: 0;
-      }
-  
-      #wholeTitleRow {
-        padding-bottom: 80px;
-        box-shadow: 0px 0px 5px black;
-        text-shadow: 0px 0px 0px black;
-        background-color: crimson;
-        opacity: .9;
-      }
-  
-      #topTitleRow {
-        width: 100%;
-        height: 140px;
-        text-align: center;
-        color: #fff;
-        font-size: 140px;
-        font-family: "lato", sans-serif;
-      }
-  
-      #bottomTitleRow {
-        width: 100%;
-        text-align: center;
-        color: #fff;
-        font-size: 100px;
-        font-family: "tangerine", cursive;
-      }
-  
-      #underTitle {
-        height: 300px;
-        background: white;
-        text-align: center;
-        font-size: 40px;
-        display: block;
-        color: black;
-        text-decoration: none;
-      }
-  
-      #downArrow {
-        background: crimson;
-        width: 60px;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 0 20px black;
-        transition: width .5s;
-      }
-  
-      #downArrow:hover {
-        width: 50px;
-      }
-  
-      #secondWhiteSpace {
-        color: blueviolet;
-        font-size: 70px;
-        height: 100px;
-        padding-top: 0px;
-        text-align: center;
-        font-weight: bold;
-        text-shadow: 0px 0px 2px black;
-        background: white;
-        opacity: .9;
-        font-family: "lato", sans-serif;
-      }
-  
-      #firstBodyRow {
-        padding-top: 60px;
-        padding-bottom: 40px;
-        font-size: 35px;
-        color: #fff;
-        background-color: blueviolet;
-        text-align: center;
-      }
-  
-      #thirdWhiteSpace {
-        color: #05b;
-        font-size: 70px;
-        padding-top: 40px;
-        text-align: center;
-        font-weight: bold;
-        text-shadow: 0px 0px 2px black;
-        height: 200px;
-        background: white;
-        font-family: "lato", sans-serif;
-      }
-  
-      #secondBodyRow {
-        background-color: #05b;
-        color: #fff;
-        font-size: 35px;
-        text-align: center;
-        padding: 50px;
-      }
-  
-      #fourthWhiteSpace {
-        background: white;
-        height: 120px;
-        font-size: 30px;
-        text-align: center;
-        padding-top: 10px;
-        font-weight: bold;
-        color: #05b;
-      }
-  
-      #backgroundImage {
-        background: url("") center;
-        z-index: -1;
-        background-size: cover;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-      }
-  
-      #menuBar {
-        z-index: 1;
-        background: white;
-        width: 100%;
-        box-shadow: 0px 0px 30px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        text-align: center;
-  
-        position: fixed;
-        top: 0px;
-      }
-  
-      #menuItem {
-        font-size: 40px;
-        font-weight: bold;
-        color: blueviolet;
-        text-shadow: 0px 0px 0px black;
-        font-family: times;
-      }
-    </style>
-  
-      <script>
+  <script>
   
   /* sidenav */
   
@@ -613,25 +336,6 @@
   
             document.getElementById("contactSideMenu").style.display = "none";
           }
-        }
-        
-  
-  /* overlay nav */
-  
-        function openNav() {
-          document.getElementById("myNav").style.height = "100%";
-          //	document.getElementById("menu").style.top = "200px";
-          //	document.getElementById("menu").style.color = "crimson";
-          document.getElementById("menu").style.display = "none";
-          document.getElementById("closeButton").style.display = "block";
-        }
-  
-        function closeNav() {
-          document.getElementById("myNav").style.height = "0%";
-          document.getElementById("menu").style.top = "10px";
-          document.getElementById("menu").style.color = "black";
-          document.getElementById("menu").style.display = "block";
-          document.getElementById("closeButton").style.display = "none";
         }
       </script>
     
