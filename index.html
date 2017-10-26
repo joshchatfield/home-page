@@ -23,12 +23,12 @@
               top: 10px;
               left: 20px;
               border-radius: 50%;
-              box-shadow: 0 0 20px black;
+              box-shadow: 0 0 5px black;
               transition: transform .5s;
             }
             
             #menu {
-              box-shadow: 0 0 20px black;
+              box-shadow: 0 0 5px black;
               background: crimson;
               padding-left: 15px;
               padding-right: 15px;
@@ -70,17 +70,15 @@
               position:fixed;
               background:white;
               width:250px;
-              height:500px;
               font-size:18px;
-            }
-            
-            #mainSideMenu{
+              border-radius: 5px;
               right:10px;
               top:100px;
               z-index:4;
               display:none;
+              padding: 5px;
             }
-        
+
             .mainMenuOption:hover{
               
               font-weight:bold;
@@ -88,13 +86,11 @@
             }
         
             .secondarySideMenu{
-              box-shadow: 0 0 0px black;
-              right: 260px;
-              top: 100px;
-              background:crimson;
-              z-index: 4;
-              height: 500px;
-              display:none;
+              position: relative;
+              border-left: 1px solid crimson;
+              margin-left: 10px;
+              background: rgba(220,20,60,.2);
+              display: none;
             }
         
             .secondarySideMenu li:hover{
@@ -136,7 +132,13 @@
             }
 
             #logo{
-              margin-top:50px;
+              margin-top:70px;
+            }
+
+            #me{
+              border-radius: 50%;
+              margin-bottom: 30px;
+              box-shadow: 0 0 5px;
             }
           </style>
   </head>
@@ -145,39 +147,40 @@
   <!-- main menu -->
   
       <ul class = "sideMenu" id  = "mainSideMenu">
+
         <li class = "mainMenuOption" id = "projectsOption" onclick="projectsOption()">projects</li> 
+
+          <!-- projects -->
+          <ul class = "secondarySideMenu" id = "projectsSideMenu">
+              <li><a href="http://drcsangha.com">DRCSangha.com</a></li>
+              <li><a href="http://lcctorch.com">LaneCC Newspaper</a></li>
+          </ul>
+
         <li class = "mainMenuOption" id = "sub-componentsOption" onClick = "subComponentsOption()">sub-components</li>
+
+          <!-- sub-components -->   
+          <ul class = "secondarySideMenu" id = "sub-componentsSideMenu">
+            <li><a href="http://chatfieldcreate.com/wikipedia">Search Wikipedia</a></li>
+            <li><a href = "http://chatfieldcreate.com/twitch">Search TwitchTV</a></li>
+            <li><a href="http://chatfieldcreate.com/weather2">View Weather</a></li>
+            <li><a href="http://chatfieldcreate.com/tribute">Tribute Page</a></li>        
+          </ul>
+          
         <li class = "mainMenuOption" id = "blogOption" onClick = "blogOption()">blog</li>
+
+          <!-- blog -->           
+          <ul class = "secondarySideMenu" id = "blogSideMenu">
+            <li>Coming Soon</li>
+          </ul>
+
         <li class = "mainMenuOption" id = "contactOption" onClick = "contactOption()">contact</li>
-      </ul>
       
-  <!-- projects -->
-  
-      <ul class = "sideMenu secondarySideMenu" id = "projectsSideMenu">
-          <li><a href="http://drcsangha.com">DRCSangha.com</a></li>
-          <li><a href="http://lcctorch.com">LaneCC Newspaper</a></li>
+          <!-- contact -->
+          <ul class = "secondarySideMenu" id = "contactSideMenu">
+            <li><a href="mailto:joshchatfield@gmail.com">joshchatfield@gmail.com</a></li>
+          </ul>
+
       </ul>
-  
-  <!-- sub-components -->
-  
-      <ul class = "sideMenu secondarySideMenu" id = "sub-componentsSideMenu">
-        <li><a href="http://chatfieldcreate.com/wikipedia">Search Wikipedia</a></li>
-        <li><a href = "http://chatfieldcreate.com/twitch">Search TwitchTV</a></li>
-        <li><a href="http://chatfieldcreate.com/weather2">View Weather</a></li>
-        <li><a href="http://chatfieldcreate.com/tribute">Tribute Page</a></li>        
-      </ul>
-  
-  <!-- blog -->
-  
-      <ul class = "sideMenu secondarySideMenu" id = "blogSideMenu">
-        <li>Coming Soon</li>
-      </ul>
-  
-  <!-- contact -->
-  
-      <ul class = "sideMenu secondarySideMenu" id = "contactSideMenu">
-          <li><a href="mailto:joshchatfield@gmail.com">joshchatfield@gmail.com</a></li>
-        </ul>
     
     
         <div id="iconDiv">
@@ -191,10 +194,12 @@
 
         <section>
           
+          <img id = "me" src = "joshFB.jpg" />
+
           <h1>Josh Chatfield</h1>
           <h3>Web Developer</h3>
 
-          <img src="http://www.chatfieldcreate.com/chatfieldcreatelogo" id = "logo">
+          <img src="http://www.chatfieldcreate.com/chatfieldcreatelogo" id = "logo" />
 
         </section>
 
