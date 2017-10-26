@@ -48,7 +48,7 @@ app.get('/quote',function(req,res){
 
 
 
-//app.use(express.static(path.join(_dirname, 'public')));
+app.use(express.static('./'));
 
 // start the server on port 80
 app.listen(80);
