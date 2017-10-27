@@ -5,33 +5,42 @@
     }
     
     #container{
-        max-width: 1100px;
+        max-width: 1000px;
         margin: auto;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
     }
 
     #left-column{
         width: 200px;
-        float: left;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        
     }
 
     #center-column{
-        float: left;
+        position: absolute;
+        padding: 10px;
+        top: 0px;
+        left: 200px;
+        right: 300px;
     }
 
     #right-column{
         width: 300px;
-        float: left;
+        position: absolute;
+        top: 0px;
+        right: 0px;
     }
 
     section{
-        width:500px;
-        float:left;
-        margin: 20px;
     }
 
     header{
-        margin: 20px;
-        width: 500px;
     }
 
     h1, h2, h3{
@@ -45,7 +54,7 @@
 
         <div id = "left-column">
             <h3>Twitter Feed</h3>
-            <a class="twitter-timeline" href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">A Twitter List by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
+            <a class="twitter-timeline" data-height="700" href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">A Twitter List by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
         </div>
 
         <div id = "center-column">
@@ -68,8 +77,7 @@
                     <p>Erat disputationi ea duo. An quas lorem nam, id pro omnesque volutpat, vim ex voluptaria intellegam. Sea quem ponderum interpretaris ad, duo ad dicam vivendum interpretaris. Rebum consequuntur eos ut, eos inimicus accommodare in.</p>
             </article>
             
-            <h3>Instagram</h3>
-            <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/383af2c1177458558a4eebf3c24fe622.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+            
 
         </section>
     </div>
@@ -77,7 +85,9 @@
     <div id = "right-column">
         <h3>Youtube</h3>
         <iframe src = "https://www.youtube.com/embed/5dsGWM5XGdg"></iframe>
-    
+        
+        <h3>Instagram</h3>
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/53583cb6a83954a8bc2c1b807bcb9445.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
         
     </div>
 
