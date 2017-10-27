@@ -1,5 +1,16 @@
 <html>
 <head>
+
+    <!--
+
+        to do:
+            google 
+                maps
+                calendar
+            paypal
+
+    -->
+
 <style>
     body *{
     }
@@ -14,33 +25,10 @@
         left: 0px;
     }
 
-    #left-column{
-        width: 200px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        
-    }
-
-    #center-column{
-        position: absolute;
-        padding: 10px;
-        top: 0px;
-        left: 200px;
-        right: 300px;
-    }
-
-    #right-column{
-        width: 300px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-    }
-
     section{
-    }
-
-    header{
+        width: 333px;
+        float:left;
+        height: 500px;
     }
 
     h1, h2, h3{
@@ -52,19 +40,16 @@
 
     <div id = "container">
 
-        <div id = "left-column">
+        <section>
             <h3>Twitter Feed</h3>
-            <a class="twitter-timeline" data-height="700" href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">A Twitter List by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
-        </div>
-
-        <div id = "center-column">
-
-        <header>
-            <h1>Using API's</h1>
-        </header>
+            <a class="twitter-timeline" data-height="500" href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">A Twitter List by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
+        </section>
 
         <section>
-            <h2>Content</h2>
+
+            <h1>Using API's</h1>
+
+            <h3>Content</h3>
             <article>
                     <p>Lorem ipsum dolor sit amet, cum in exerci probatus, mea dico detraxit periculis id. Et sea albucius officiis, sea tota aliquam ut. Scripta maluisset nec in, in essent constituto deterruisset cum. Qui an diceret epicuri. Eum ex impetus persius, in eam tale temporibus dissentiet.</p>
                     
@@ -72,24 +57,19 @@
                     
                     <p>Partiendo corrumpit consequat ex eum, ad quem suavitate sententiae eos. Pri et quod fugit laboramus, delicatissimi interpretaris no mel. Eu sea movet nobis lucilius. Ne doctus tibique contentiones vim. Quando bonorum ceteros per ad, cu mei alterum accusamus.</p>
                     
-                    <p>Quem qualisque cum ex, mea brute suscipiantur at, mea cu pertinax nominati. In mei urbanitas pertinacia temporibus, vim assum tation laudem ad, sed ex quis scriptorem. Aeterno convenire ad mea. Nec tantas signiferumque no, platonem pericula assueverit vim id.</p>
                     
-                    <p>Erat disputationi ea duo. An quas lorem nam, id pro omnesque volutpat, vim ex voluptaria intellegam. Sea quem ponderum interpretaris ad, duo ad dicam vivendum interpretaris. Rebum consequuntur eos ut, eos inimicus accommodare in.</p>
             </article>
             
-            
-
         </section>
-    </div>
 
-    <div id = "right-column">
+    <section>
         <h3>Youtube</h3>
         <iframe src = "https://www.youtube.com/embed/5dsGWM5XGdg"></iframe>
         
         <h3>Instagram</h3>
         <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/53583cb6a83954a8bc2c1b807bcb9445.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
         
-    </div>
+    </section>
 
     </div>
 
