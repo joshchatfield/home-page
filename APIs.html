@@ -23,6 +23,8 @@
         right: 0px;
         bottom: 0px;
         left: 0px;
+        border-right: 1px solid crimson;
+        border-left: 1px solid crimson;
     }
 
     section{
@@ -31,10 +33,13 @@
         height: 500px;
         overflow-y: auto;
         padding: 5px;
+        
     }
 
     h1, h2, h3{
         text-align: center;
+        background:crimson;
+        color: white;
     }
 </style>
 </head>
@@ -50,21 +55,24 @@
         <section>
 
             <h1>Using API's</h1>
-
-            <h3>Content</h3>
             <article>
-                    <p>Lorem ipsum dolor sit amet, cum in exerci probatus, mea dico detraxit periculis id. Et sea albucius officiis, sea tota aliquam ut. Scripta maluisset nec in, in essent constituto deterruisset cum. Qui an diceret epicuri. Eum ex impetus persius, in eam tale temporibus dissentiet.</p>
-                    
-                    <p>Ea sit dicunt option tibique, ubique detracto postulant eum id. Mei id altera quodsi, sea semper tacimates ei. Quo ne platonem partiendo splendide, at eos adhuc evertitur comprehensam. An sit oporteat lucilius mediocritatem, ius et saepe contentiones.</p>
-                    
-                    <p>Partiendo corrumpit consequat ex eum, ad quem suavitate sententiae eos. Pri et quod fugit laboramus, delicatissimi interpretaris no mel. Eu sea movet nobis lucilius. Ne doctus tibique contentiones vim. Quando bonorum ceteros per ad, cu mei alterum accusamus.</p>
-
-                    <p>Partiendo corrumpit consequat ex eum, ad quem suavitate sententiae eos. Pri et quod fugit laboramus, delicatissimi interpretaris no mel. Eu sea movet nobis lucilius. Ne doctus tibique contentiones vim. Quando bonorum ceteros per ad, cu mei alterum accusamus.</p>
-
-                    <p>Partiendo corrumpit consequat ex eum, ad quem suavitate sententiae eos. Pri et quod fugit laboramus, delicatissimi interpretaris no mel. Eu sea movet nobis lucilius. Ne doctus tibique contentiones vim. Quando bonorum ceteros per ad, cu mei alterum accusamus.</p>
-                    
-                    
+                    <p>This page is an example of the different API's available for use.</p>
             </article>
+            <h3>Paypal</h3>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="GZZPL4TE9EGSG">
+                <table>
+                <tr><td><input type="hidden" name="on0" value="variations">variations</td></tr><tr><td><select name="os0">
+                    <option value="Option 1">Option 1 $1.10 USD</option>
+                    <option value="Option 2">Option 2 $1.20 USD</option>
+                    <option value="Option 3">Option 3 $1.30 USD</option>
+                </select> </td></tr>
+                </table>
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
             
         </section>
 
