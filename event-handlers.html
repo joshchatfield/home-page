@@ -1,0 +1,50 @@
+
+
+
+
+
+
+<html>
+
+<body>
+
+<div id="test">
+    example text
+</div>
+
+<p onclick="click()">click me</p>
+
+
+
+<script>
+    var specifiedElement = document.getElementById('test');
+
+    //I'm using "click" but it works with any event
+    document.addEventListener('click', function(event) {
+        var isClickInside = specifiedElement.contains(event.target);
+
+        if (!isClickInside) {
+            //the click was outside the specifiedElement, do something
+            specifiedElement.style.display = "none";
+            
+        }
+    });
+
+    function click(){
+        document.getElementById("test").style.display = "block";
+    }
+</script>
+</body>
+</html>
+
+
+
+<!--
+
+const width = window.matchMedia( "(max-width: 1100px)" ); 
+            
+            if (width.matches){
+                document.getElementsByTagName("aside")[0].style.display = "";
+            }
+
+-->
