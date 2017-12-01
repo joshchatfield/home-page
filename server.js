@@ -14,8 +14,9 @@ when making profiles I could allow users to
 // get dependencies
 var express = require('express');
 var app = express();
-var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
+var MongoClient = require('mongodb').MongoClient;
+var mongojs = require("mongojs");// lightweight driver that sits ontop of mongodb native client MongoClient (less callbacks)
 
 // set static folder
 app.use(express.static('./'));
@@ -25,8 +26,13 @@ app.listen(80);
 
 // set variables
 var url = 'mongodb://localhost:27017/mydb';
+var db = mongojs(url);
+
 
 // server response methods
+
+//db.documents.insert({"test2":"message"});
+
 MongoClient.connect(url, function(err, db) {
 assert.equal(null, err);
 console.log("Connected successfully to server");
