@@ -139,3 +139,18 @@ h3 {
     width:500px;
     margin: auto;
 }
+
+#fbIcon{
+    width: 50px;
+}
+#liIcon{
+    width: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#socialIcons{
+    margin: auto;
+}
