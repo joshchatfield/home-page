@@ -1,0 +1,141 @@
+/* top buttons */
+
+#icon {
+    background: crimson;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px black;
+    transition: transform .5s;
+    z-index: 3;
+}
+
+#menu {
+    box-shadow: 0 0 5px black;
+    background: crimson;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 50px;
+    right: 40px;
+    top: 10px;
+    position: fixed;
+    border-radius: 50%;
+    animation: transform;
+    transition: transform .5s;
+    z-index: 3;
+}
+
+#icon:hover {
+    opacity: .9;
+    transform: rotate(20deg);
+}
+
+#menu:hover {
+    cursor: pointer;
+    opacity: .9;
+    transform: rotate(20deg);
+}
+
+/* side menu */
+
+ul,
+li {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    padding: 10px;
+}
+
+.sideMenu {
+    box-shadow: 0 0 20px;
+    position: fixed;
+    background: white;
+    width: 250px;
+    font-size: 18px;
+    border-radius: 5px;
+    right: 10px;
+    top: 100px;
+    z-index: 4;
+    display: none;
+    padding: 5px;
+}
+
+.mainMenuOption:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secondarySideMenu {
+    position: relative;
+    border-left: 1px solid crimson;
+    margin-left: 10px;
+    background: rgba(220, 20, 60, .2);
+    display: none;
+}
+
+.secondarySideMenu li:hover {
+    font-weight: bold;
+}
+
+.secondarySideMenu a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    max-width: 700px;
+    margin: 200px auto 20px auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+}
+
+h1 {
+    font-family: lato;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 9px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo {
+    margin: auto;
+    width: 400;
+}
+
+#me {
+    border-radius: 50%;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px;
+}
+
+#instagram {
+    margin: 50px 20px 20px 20px;
+}
+
+.textBody{
+    width:500px;
+    margin: auto;
+}
