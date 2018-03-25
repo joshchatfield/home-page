@@ -1,248 +1,128 @@
 <html>
-  <head>
-    <link rel="icon" href="favicon.ico">
-    <title>ChatfieldCreate</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100|Tangerine" rel="stylesheet">
-    <link rel='stylesheet' href='styles.css'>
-    <meta name="viewport" content="width=divice-width, initial-scale=1">
-  </head>
-  <body>
-  
-  <!-- main menu -->
-  
-      <ul class = "sideMenu" id  = "mainSideMenu">
+<head>
+  <link rel="icon" href="favicon.ico">
+  <title>ChatfieldCreate</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100|Tangerine" rel="stylesheet">
+  <link rel='stylesheet' href='styles.css'>
+  <meta name="viewport" content="width=divice-width, initial-scale=1">
+  <script src="script.js"></script>
+</head>
 
-        <li class = "mainMenuOption" id = "projectsOption" onclick="projectsOption()">projects</li> 
+<body>
 
-          <!-- projects -->
-          <ul class = "secondarySideMenu" id = "projectsSideMenu">
-            <!--<li><a href="http://drcsangha.com">DRCSangha.com</a></li>-->
-            <li><a href="http://lcctorch.com">LaneCC Newspaper</a></li>
-          </ul>
+  <!-- HIDDEN MENU CONTENT -->
+  <ul class="sideMenu" id="mainSideMenu">
+    <li class="mainMenuOption" id="projectsOption" onclick="projectsOption()">projects</li>
 
-        <li class = "mainMenuOption" id = "sub-componentsOption" onClick = "subComponentsOption()">sub-components</li>
+    <!-- projects -->
+    <ul class="secondarySideMenu" id="projectsSideMenu">
+      <!--<li><a href="http://drcsangha.com">DRCSangha.com</a></li>-->
+      <li>
+        <a href="http://lcctorch.com">LaneCC Newspaper</a>
+      </li>
+    </ul>
+    <li class="mainMenuOption" id="sub-componentsOption" onClick="subComponentsOption()">sub-components</li>
 
-          <!-- sub-components -->   
-          <ul class = "secondarySideMenu" id = "sub-componentsSideMenu">
-            <li><a href="wikipedia.html">Search Wikipedia</a></li>
-            <li><a href = "twitch.html">Search TwitchTV</a></li>
-            <li><a href="weather2.htm">View Weather</a></li>
-            <li><a href="tribute.html">Tribute Page</a></li>
-            <li><a href = "APIs.html">Using API's</a></li>        
-          </ul>
-          
-        <li class = "mainMenuOption" id = "blogOption" onClick = "blogOption()">blog</li>
+    <!-- sub-components -->
+    <ul class="secondarySideMenu" id="sub-componentsSideMenu">
+      <li>
+        <a href="wikipedia.html">Search Wikipedia</a>
+      </li>
+      <li>
+        <a href="twitch.html">Search TwitchTV</a>
+      </li>
+      <li>
+        <a href="weather2.htm">View Weather</a>
+      </li>
+      <li>
+        <a href="tribute.html">Tribute Page</a>
+      </li>
+      <li>
+        <a href="APIs.html">Using API's</a>
+      </li>
+    </ul>
+    <li class="mainMenuOption" id="blogOption" onClick="blogOption()">blog</li>
 
-          <!-- blog -->           
-          <ul class = "secondarySideMenu" id = "blogSideMenu">
-            <li><a href="https://www.webappbirdseyeview.com">Bird's Eye View</a></li>
-          </ul>
+    <!-- blog -->
+    <ul class="secondarySideMenu" id="blogSideMenu">
+      <li>
+        <a href="https://www.webappbirdseyeview.com">Bird's Eye View</a>
+      </li>
+    </ul>
+    <li class="mainMenuOption" id="contactOption" onClick="contactOption()">contact</li>
 
-        <li class = "mainMenuOption" id = "contactOption" onClick = "contactOption()">contact</li>
-      
-          <!-- contact -->
-          <ul class = "secondarySideMenu" id = "contactSideMenu">
-            <li><a href="mailto:joshchatfield@gmail.com">joshchatfield@gmail.com</a></li>
-            <li>541 521 5546</li>
-          </ul>
+    <!-- contact -->
+    <ul class="secondarySideMenu" id="contactSideMenu">
+      <li>
+        <a href="mailto:joshchatfield@gmail.com">joshchatfield@gmail.com</a>
+      </li>
+      <li>541 521 5546</li>
+    </ul>
+  </ul>
 
-      </ul>
+  <!-- ICON -->
+  <div id="iconDiv">
+    <a href="http://www.chatfieldcreate.com">
+      <img id="icon" src="chatfieldcreateicon.png">
+    </a>
+  </div>
+
+  <!-- MENU BUTTON -->
+  <div
+    id="menu"
+    onClick="displaySideMenu()">
+    &#9776;
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class='mainContent'>
+
+    <!-- HEADSHOT -->
+    <img id="me" src="joshFB.jpg" />
+
+    <!-- TITLE AND SUBTITLE -->
+    <h1>Josh Chatfield</h1>
+    <h3>Web Developer</h3>
+    <br>
+
+    <!-- SOCIAL ICONS -->
+    <div id='socialIcons'>
+      <a href='https://www.facebook.com/chatfieldcreate'>
+        <img src='fbicon.png' id='fbIcon'>
+      </a>
+      <a href='https://www.linkedin.com/in/chatfieldcreate'>
+        <img src='liicon.png' id='liIcon'>
+      </a>
+      <a href='https://www.github.com/joshchatfield'>
+        <img src='gitIcon.png' id='gitIcon'>
+      </a>
+      <a href='https://www.freecodecamp.org/joshchatfield'>
+        <img src='FCC.png' id='fccIcon'>
+      </a>
+    </div>
+    <br>
+
+    <!-- DESCRIPTION -->
+    <div class='textBody'>
+      <p class='lead'> <!-- bootstrap class -->
+        ChatfieldCreate builds, deploys, and maintains custom web pages and web applications using Nodejs and Angular technologies.
+      </p>
+    </div>
+    <br>
+    <br>
     
-    
-        <div id="iconDiv">
-          <a href="http://www.chatfieldcreate.com">
-            <img id="icon" src="chatfieldcreateicon.png">
-          </a>
-        </div>
+    <!-- LOGO -->
+    <img src="Logo.png" id="logo" />
 
-        <div id="menu" onClick="displaySideMenu()">&#9776;
-        </div>
+    <!-- INSTAGRAM -->
+    <div id="instagram">
+      <!-- LightWidget WIDGET -->
+      <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+      <iframe src="//lightwidget.com/widgets/afcef2af3bdd5b3e93b4cff1d7829178.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"
+        style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
 
-        <section>
-          
-          <img id = "me" src = "joshFB.jpg" />
-
-          <h1>Josh Chatfield</h1>
-          <h3>Web Developer</h3>
-
-
-          <br>
-          <div id='socialIcons'>
-            <a href='https://www.facebook.com/chatfieldcreate'>
-              <img src='fbicon.png' id='fbIcon'>
-            </a>
-            <a href='https://www.linkedin.com/in/chatfieldcreate'>
-              <img src='liicon.png' id='liIcon'>
-            </a>
-            <a href='https://www.github.com/joshchatfield'>
-              <img src='gitIcon.png' id='gitIcon'>
-            </a>
-            <a href='https://www.freecodecamp.org/joshchatfield'>
-              <img src='FCC.png' id='fccIcon'>
-            </a>
-          </div>
-          
-          <br>
-          <div class='textBody'>
-            <p class='lead'>
-              ChatfieldCreate builds, deploys, and maintains custom web pages and web applications using
-              Nodejs and Angular technologies.
-            </p>
-          </div>
-
-          <br>
-          <br>
-          <img src="Logo.png" id="logo" />
-
-          <div id = "instagram">
-            <!-- LightWidget WIDGET -->
-            
-            <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-            <iframe src="//lightwidget.com/widgets/afcef2af3bdd5b3e93b4cff1d7829178.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>          </div>
-            
-        </section>
-
-  </body>
-  
-  <script>
-  
-  /* sidenav */
-  
-        function displaySideMenu(){
-          if(document.getElementById("mainSideMenu").style.display != "block"){
-            document.getElementById("mainSideMenu").style.display = "block";
-          }else{
-            document.getElementById("mainSideMenu").style.display = "none";
-            document.getElementById("projectsSideMenu").style.display = "none";
-            document.getElementById("sub-componentsSideMenu").style.display = "none";
-            document.getElementById("blogSideMenu").style.display = "none";
-            document.getElementById("contactSideMenu").style.display = "none";
-            document.getElementById("projectsOption").style.background = "white";
-            document.getElementById("sub-componentsOption").style.background = "white";
-            document.getElementById("blogOption").style.background = "white";
-            document.getElementById("contactOption").style.background = "white";
-          }
-        }
-  
-        function projectsOption(){
-  
-          if(document.getElementById("projectsSideMenu").style.display != "block"){
-            
-            document.getElementById("projectsOption").style.background = "crimson";
-  
-            document.getElementById("projectsSideMenu").style.display = "block";
-            
-  
-            document.getElementById("sub-componentsOption").style.background = "white";
-            
-            document.getElementById("sub-componentsSideMenu").style.display = "none";
-  
-  
-            document.getElementById("blogOption").style.background = "white";
-  
-            document.getElementById("blogSideMenu").style.display = "none";
-  
-  
-            document.getElementById("contactOption").style.background = "white";
-  
-            document.getElementById("contactSideMenu").style.display = "none";
-            
-          }else{
-            
-            document.getElementById("projectsOption").style.background = "white";
-            
-            document.getElementById("projectsSideMenu").style.display = "none";
-          }
-        }
-  
-        function subComponentsOption(){
-  
-          if(document.getElementById("sub-componentsSideMenu").style.display != "block"){
-            
-            document.getElementById("projectsOption").style.background = "white";
-  
-            document.getElementById("projectsSideMenu").style.display = "none";
-            
-  
-            document.getElementById("sub-componentsOption").style.background = "crimson";
-            
-            document.getElementById("sub-componentsSideMenu").style.display = "block";
-  
-  
-            document.getElementById("blogOption").style.background = "white";
-  
-            document.getElementById("blogSideMenu").style.display = "none";
-  
-  
-            document.getElementById("contactOption").style.background = "white";
-  
-            document.getElementById("contactSideMenu").style.display = "none";
-            
-          }else{
-            document.getElementById("sub-componentsOption").style.background = "white";
-  
-            document.getElementById("sub-componentsSideMenu").style.display = "none";
-          }
-        }
-        function blogOption(){
-  
-          if(document.getElementById("blogSideMenu").style.display != "block"){
-            
-            document.getElementById("projectsOption").style.background = "white";
-  
-            document.getElementById("projectsSideMenu").style.display = "none";
-            
-  
-            document.getElementById("sub-componentsOption").style.background = "white";
-            
-            document.getElementById("sub-componentsSideMenu").style.display = "none";
-  
-  
-            document.getElementById("blogOption").style.background = "crimson";
-  
-            document.getElementById("blogSideMenu").style.display = "block";
-  
-  
-            document.getElementById("contactOption").style.background = "white";
-  
-            document.getElementById("contactSideMenu").style.display = "none";
-            
-          }else{
-            document.getElementById("blogOption").style.background = "white";
-            
-            document.getElementById("blogSideMenu").style.display = "none";
-          }
-        }
-        function contactOption(){
-  
-          if(document.getElementById("contactSideMenu").style.display != "block"){
-            
-            document.getElementById("projectsOption").style.background = "white";
-  
-            document.getElementById("projectsSideMenu").style.display = "none";
-            
-  
-            document.getElementById("sub-componentsOption").style.background = "white";
-            
-            document.getElementById("sub-componentsSideMenu").style.display = "none";
-  
-  
-            document.getElementById("blogOption").style.background = "white";
-  
-            document.getElementById("blogSideMenu").style.display = "none";
-  
-  
-            document.getElementById("contactOption").style.background = "crimson";
-  
-            document.getElementById("contactSideMenu").style.display = "block";
-            
-          }else{
-            document.getElementById("contactOption").style.background = "white";
-  
-            document.getElementById("contactSideMenu").style.display = "none";
-          }
-        }
-      </script>
-    
-  </html>
+  </div> <!-- END MAIN CONTENT -->
+</body>
+</html>
